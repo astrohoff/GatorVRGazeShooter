@@ -195,6 +195,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 970dd4b9371394fb4890965f608d46fd, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1677260438 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11414954, guid: 970dd4b9371394fb4890965f608d46fd,
+    type: 2}
+  m_PrefabInternal: {fileID: 979758238}
+  m_Script: {fileID: 11500000, guid: a40b544b8c3553c40852ae7ad35a9343, type: 3}
 --- !u!1 &1719380191
 GameObject:
   m_ObjectHideFlags: 0
@@ -286,6 +292,7 @@ GameObject:
   - 92: {fileID: 2100562494}
   - 124: {fileID: 2100562493}
   - 81: {fileID: 2100562492}
+  - 114: {fileID: 2100562497}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -361,3 +368,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &2100562497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2100562491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90074c8bd876e9a41aa451fbf6898edc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gvrViewer: {fileID: 1677260438}
+  projectilePrefab: {fileID: 1000011177634550, guid: b6e422c5e8f7f81428f105e7cf926a16,
+    type: 2}
