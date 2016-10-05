@@ -6,8 +6,10 @@ public class Spawner : MonoBehaviour
     public GameObject targetPrefab;
     public int targetCount = 3;
     public GameObject projectilePrefab;
-    float targetMinDistance = 2;
-    float targetMaxDistance = 7;
+    public float targetMinDistance = 2;
+    public float targetMaxDistance = 7;
+    public GameObject scorePanelPrefab;
+    public ScoreController scoreCtrl;
 
     // Use this for initialization
     void Start()
@@ -40,7 +42,17 @@ public class Spawner : MonoBehaviour
     public void SpawnProjectile(Vector3 position, Quaternion rotation)
     {
         GameObject projectile = (GameObject)Instantiate(projectilePrefab, position, rotation);
+        ProjectileController projectileCtrl = projectile.GetComponent<ProjectileController>();
         // Set the projectile's reference to this script.
-        projectile.GetComponent<ProjectileController>().spawner = this;
+        projectileCtrl.spawner = this;
+        // Set the projectile's reference to the score controller.
+        projectileCtrl.scoreCtrl = scoreCtrl;
+    }
+    public void SpawnScorePanel(Vector3 position, Quaternion rotation)
+    {
+        GameObject scorePanel = (GameObject)Instantiate(scorePanelPrefab, position, rotation);
+        ScorePanelController scorePanelCtrl = scorePanel.GetComponent<ScorePanelController>();
+        scorePanelCtrl.scoreCtrl = scoreCtrl;
+        scorePanelCtrl.Initialize();
     }
 }

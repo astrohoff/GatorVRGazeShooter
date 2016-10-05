@@ -7,6 +7,7 @@ public class ProjectileController : MonoBehaviour
     // Speed of the projectile. Default value of 1 can be overwritten in Unity's inspector panel.
     public float speed = 1;
     public Spawner spawner;
+    public ScoreController scoreCtrl;
 
     // Use this for initialization
     void Start()
@@ -21,8 +22,14 @@ public class ProjectileController : MonoBehaviour
     {
         if (c.gameObject.tag == "Target")
         {
+            // Add 1 to score.
+            scoreCtrl.IncrementScore();
+            // Spawn a score panel.
+            spawner.SpawnScorePanel(c.transform.position, c.transform.rotation);
+            // Destory projectile and target.
             Destroy(c.gameObject);
             Destroy(gameObject);
+            // Spawn a new target.
             spawner.SpawnTarget();
         }
     }
