@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public GvrViewer gvrViewer;
     public GameObject projectilePrefab;
+    public Spawner spawner;
 
     // Use this for initialization.
 
@@ -17,7 +18,7 @@ public class PlayerController : MonoBehaviour
         // Projectile is also given the camera's rotation so that it can just move forward once it has been created.
         if(gvrViewer.Triggered)
         {
-            Instantiate(projectilePrefab, transform.position, transform.rotation);
+            spawner.SpawnProjectile(transform.position, transform.rotation);
         }
     }
 }
