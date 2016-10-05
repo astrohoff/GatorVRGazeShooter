@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44692546, g: 0.49678695, b: 0.5750854, a: 1}
+  m_IndirectSpecularColor: {r: 0.44692534, g: 0.49678725, b: 0.57508564, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -121,7 +121,7 @@ Light:
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -237,6 +237,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPrefab: {fileID: 1000012125684294, guid: 7cbf3d1027a9645469b9bcd33900dab7,
     type: 2}
+  targetCount: 3
+  projectilePrefab: {fileID: 1000011177634550, guid: b6e422c5e8f7f81428f105e7cf926a16,
+    type: 2}
 --- !u!114 &1677260438 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11414954, guid: 970dd4b9371394fb4890965f608d46fd,
@@ -345,3 +348,4 @@ MonoBehaviour:
   gvrViewer: {fileID: 1677260438}
   projectilePrefab: {fileID: 1000011177634550, guid: b6e422c5e8f7f81428f105e7cf926a16,
     type: 2}
+  spawner: {fileID: 1416620579}
